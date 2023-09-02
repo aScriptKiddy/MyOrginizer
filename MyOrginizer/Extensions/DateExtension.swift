@@ -6,3 +6,12 @@
 //
 
 import Foundation
+extension Date {
+    var sevenDaysOut: Date {
+        Calendar.autoupdatingCurrent.date(byAdding: .day, value: 7, to: self) ?? self
+    }
+
+    var thirtyDaysOut: Date {
+        Calendar.autoupdatingCurrent.date(byAdding: .day, value: 30, to: self) ?? self
+    }
+}

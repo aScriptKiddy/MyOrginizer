@@ -42,7 +42,7 @@ class TodoViewModel: ObservableObject {
 
     func lastSevenDays() -> [TodoModel] {
         todoItems.filter { todo in
-            todo.dueDate >= Date.now //&& todo.dueDate <= addDays(addDays: 7)
+            todo.dueDate >= Date.now && todo.dueDate <= addDays(addDays: 7)
         }
     }
 

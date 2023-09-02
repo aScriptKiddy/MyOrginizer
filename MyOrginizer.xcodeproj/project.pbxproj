@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		431C2DB32AA2E30C002E65B4 /* Dashboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431C2DB22AA2E30C002E65B4 /* Dashboard.swift */; };
 		431C2DB52AA2E926002E65B4 /* CalendarScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431C2DB42AA2E926002E65B4 /* CalendarScreenView.swift */; };
+		431C2DB92AA3044E002E65B4 /* CountDownScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431C2DB82AA3044E002E65B4 /* CountDownScreenView.swift */; };
+		431C2DBB2AA30497002E65B4 /* CountDownModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431C2DBA2AA30497002E65B4 /* CountDownModel.swift */; };
+		43325D3D2AA30B9800E31A6C /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43325D3C2AA30B9800E31A6C /* DateExtension.swift */; };
 		43AEE207297DCE1200A0D307 /* MyOrginizerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43AEE206297DCE1200A0D307 /* MyOrginizerApp.swift */; };
 		43AEE209297DCE1200A0D307 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43AEE208297DCE1200A0D307 /* ContentView.swift */; };
 		43AEE20B297DCE1300A0D307 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 43AEE20A297DCE1300A0D307 /* Assets.xcassets */; };
@@ -43,6 +46,9 @@
 /* Begin PBXFileReference section */
 		431C2DB22AA2E30C002E65B4 /* Dashboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dashboard.swift; sourceTree = "<group>"; };
 		431C2DB42AA2E926002E65B4 /* CalendarScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarScreenView.swift; sourceTree = "<group>"; };
+		431C2DB82AA3044E002E65B4 /* CountDownScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountDownScreenView.swift; sourceTree = "<group>"; };
+		431C2DBA2AA30497002E65B4 /* CountDownModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountDownModel.swift; sourceTree = "<group>"; };
+		43325D3C2AA30B9800E31A6C /* DateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
 		43AEE203297DCE1200A0D307 /* MyOrginizer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyOrginizer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		43AEE206297DCE1200A0D307 /* MyOrginizerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyOrginizerApp.swift; sourceTree = "<group>"; };
 		43AEE208297DCE1200A0D307 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -85,6 +91,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		431C2DB62AA303F8002E65B4 /* ToDo */ = {
+			isa = PBXGroup;
+			children = (
+				43AEE23B297DE1DC00A0D307 /* TodoItemView.swift */,
+				43AEE235297DDD0100A0D307 /* TodoDetailView.swift */,
+				43AEE233297DCEC100A0D307 /* TodoView.swift */,
+			);
+			path = ToDo;
+			sourceTree = "<group>";
+		};
+		431C2DB72AA30429002E65B4 /* Coundown */ = {
+			isa = PBXGroup;
+			children = (
+				431C2DB82AA3044E002E65B4 /* CountDownScreenView.swift */,
+			);
+			path = Coundown;
+			sourceTree = "<group>";
+		};
+		43325D3B2AA30B7500E31A6C /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				43325D3C2AA30B9800E31A6C /* DateExtension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		43AEE1FA297DCE1200A0D307 = {
 			isa = PBXGroup;
 			children = (
@@ -108,6 +140,7 @@
 		43AEE205297DCE1200A0D307 /* MyOrginizer */ = {
 			isa = PBXGroup;
 			children = (
+				43325D3B2AA30B7500E31A6C /* Extensions */,
 				43AEE232297DCE9F00A0D307 /* Models */,
 				43AEE231297DCE8900A0D307 /* ViewModels */,
 				43AEE230297DCE7D00A0D307 /* Views */,
@@ -147,9 +180,8 @@
 		43AEE230297DCE7D00A0D307 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				43AEE233297DCEC100A0D307 /* TodoView.swift */,
-				43AEE235297DDD0100A0D307 /* TodoDetailView.swift */,
-				43AEE23B297DE1DC00A0D307 /* TodoItemView.swift */,
+				431C2DB72AA30429002E65B4 /* Coundown */,
+				431C2DB62AA303F8002E65B4 /* ToDo */,
 				431C2DB22AA2E30C002E65B4 /* Dashboard.swift */,
 				431C2DB42AA2E926002E65B4 /* CalendarScreenView.swift */,
 			);
@@ -168,6 +200,7 @@
 			isa = PBXGroup;
 			children = (
 				43AEE237297DDD2600A0D307 /* TodoModel.swift */,
+				431C2DBA2AA30497002E65B4 /* CountDownModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -303,12 +336,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				43AEE23A297DDECD00A0D307 /* TodoViewModel.swift in Sources */,
+				43325D3D2AA30B9800E31A6C /* DateExtension.swift in Sources */,
 				431C2DB52AA2E926002E65B4 /* CalendarScreenView.swift in Sources */,
 				43AEE234297DCEC100A0D307 /* TodoView.swift in Sources */,
 				431C2DB32AA2E30C002E65B4 /* Dashboard.swift in Sources */,
 				43AEE209297DCE1200A0D307 /* ContentView.swift in Sources */,
 				43AEE207297DCE1200A0D307 /* MyOrginizerApp.swift in Sources */,
+				431C2DB92AA3044E002E65B4 /* CountDownScreenView.swift in Sources */,
 				43AEE238297DDD2600A0D307 /* TodoModel.swift in Sources */,
+				431C2DBB2AA30497002E65B4 /* CountDownModel.swift in Sources */,
 				43AEE23C297DE1DC00A0D307 /* TodoItemView.swift in Sources */,
 				43AEE236297DDD0100A0D307 /* TodoDetailView.swift in Sources */,
 			);

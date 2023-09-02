@@ -6,3 +6,9 @@
 //
 
 import Foundation
+
+struct CountDownModel {
+    let id = UUID()
+    let endDate: Date
+    let includeTime: Bool
+}
