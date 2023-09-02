@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		431C2DB32AA2E30C002E65B4 /* Dashboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431C2DB22AA2E30C002E65B4 /* Dashboard.swift */; };
+		431C2DB52AA2E926002E65B4 /* CalendarScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431C2DB42AA2E926002E65B4 /* CalendarScreenView.swift */; };
 		43AEE207297DCE1200A0D307 /* MyOrginizerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43AEE206297DCE1200A0D307 /* MyOrginizerApp.swift */; };
 		43AEE209297DCE1200A0D307 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43AEE208297DCE1200A0D307 /* ContentView.swift */; };
 		43AEE20B297DCE1300A0D307 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 43AEE20A297DCE1300A0D307 /* Assets.xcassets */; };
@@ -39,6 +41,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		431C2DB22AA2E30C002E65B4 /* Dashboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dashboard.swift; sourceTree = "<group>"; };
+		431C2DB42AA2E926002E65B4 /* CalendarScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarScreenView.swift; sourceTree = "<group>"; };
 		43AEE203297DCE1200A0D307 /* MyOrginizer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyOrginizer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		43AEE206297DCE1200A0D307 /* MyOrginizerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyOrginizerApp.swift; sourceTree = "<group>"; };
 		43AEE208297DCE1200A0D307 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -146,6 +150,8 @@
 				43AEE233297DCEC100A0D307 /* TodoView.swift */,
 				43AEE235297DDD0100A0D307 /* TodoDetailView.swift */,
 				43AEE23B297DE1DC00A0D307 /* TodoItemView.swift */,
+				431C2DB22AA2E30C002E65B4 /* Dashboard.swift */,
+				431C2DB42AA2E926002E65B4 /* CalendarScreenView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -297,7 +303,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				43AEE23A297DDECD00A0D307 /* TodoViewModel.swift in Sources */,
+				431C2DB52AA2E926002E65B4 /* CalendarScreenView.swift in Sources */,
 				43AEE234297DCEC100A0D307 /* TodoView.swift in Sources */,
+				431C2DB32AA2E30C002E65B4 /* Dashboard.swift in Sources */,
 				43AEE209297DCE1200A0D307 /* ContentView.swift in Sources */,
 				43AEE207297DCE1200A0D307 /* MyOrginizerApp.swift in Sources */,
 				43AEE238297DDD2600A0D307 /* TodoModel.swift in Sources */,

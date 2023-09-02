@@ -8,20 +8,34 @@
 import SwiftUI
 
 struct TodoView: View {
-	@State var todoViewModel = TodoViewModel()
-	
-	var body: some View {
-		List {
-			ForEach(todoViewModel.todoItems) { todo in
-				TodoItemView(todoModel: todo)
-			}
-			.onDelete(perform: todoViewModel.deleteTodo)
-			.onMove(perform: todoViewModel.moveTodo)
-		}
-		.navigationTitle("Todo List")
-		.navigationBarTitleDisplayMode(.large)
-		.navigationBarHidden(false)
-		.navigationBarItems(leading: leadingNav(), trailing: Text("Add"))
+    @StateObject var todoViewModel = TodoViewModel()
+
+    var body: some View {
+        VStack(alignment: .leading, spacing: 0.0) {
+            List {
+            Section("Next 7 days") {
+                ForEach(todoViewModel.lastSevenDays()) { todo in
+                    TodoItemView(todoModel: todo)
+                }
+                .onDelete(perform: todoViewModel.deleteTodo)
+                .onMove(perform: todoViewModel.moveTodo)
+            }
+
+            Section("Past") {
+                ForEach(todoViewModel.pastItems()) { todo in
+                    TodoItemView(todoModel: todo)
+                }
+                .onDelete(perform: todoViewModel.deleteTodo)
+                .onMove(perform: todoViewModel.moveTodo)
+            }
+
+            Spacer()
+        }
+    }
+        .navigationTitle("Todo List")
+        .navigationBarTitleDisplayMode(.large)
+        .navigationBarHidden(false)
+        .navigationBarItems(leading: leadingNav(), trailing: Text("Add"))
 	}
 }
 
@@ -36,14 +50,18 @@ struct leadingNav: View {
 
 #if DEBUG
 struct TodoView_Previews: PreviewProvider {
-	static let newTodos = [
-		TodoModel(title: "First todo", dueDate: "1/20/23", note: nil, isCompleted: false),
-		TodoModel(title: "Second todo", dueDate: "1/23/23", note: "This is a note", isCompleted: true),
-		TodoModel(title: "Third todo", dueDate: "1/21/23", note: "FOO2", isCompleted: true)
-	]
+    static let newTodos = [
+        TodoModel(title: "First todo", dueDate: Date.now.addingTimeInterval(8400), note: nil, isCompleted: false),
+        TodoModel(title: "Second todo", dueDate: Date.now.addingTimeInterval(8400), note: "This is a note", isCompleted: true),
+        TodoModel(title: "Third todo", dueDate: Date.now.addingTimeInterval(8400), note: "FOO2", isCompleted: true)
+        ]
+    static let fakeTodoViewModel = TodoViewModel()
+
 	static var previews: some View {
 		NavigationView {
-			TodoView(todoViewModel: TodoViewModel(todos: newTodos))
+//			TodoView(todoViewModel: TodoViewModel(todos: newTodos))
+            TodoView()
+                .environmentObject(fakeTodoViewModel)
 		}
 	}
 }

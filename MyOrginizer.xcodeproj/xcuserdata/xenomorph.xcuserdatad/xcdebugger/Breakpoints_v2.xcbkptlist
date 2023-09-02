@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "2117D654-8E42-4B5C-864D-0D064BEBD8A8"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "685E496C-BDDC-45EC-8988-15F477EB3F9C"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MyOrginizer/ViewModels/TodoViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "44"
+            endingLineNumber = "44"
+            landmarkName = "lastSevenDays()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "685E496C-BDDC-45EC-8988-15F477EB3F9C - 5f254a772e735811"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MyOrginizer.TodoViewModel.lastSevenDays() -&gt; Swift.Array&lt;MyOrginizer.TodoModel&gt;"
+                  moduleName = "MyOrginizer"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/xenomorph/Developer/git/Swift/MyOrginizer/MyOrginizer/ViewModels/TodoViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "44"
+                  endingLineNumber = "44"
+                  offsetFromSymbolStart = "56">
+               </Location>
+               <Location
+                  uuid = "685E496C-BDDC-45EC-8988-15F477EB3F9C - 51e93831d1150961"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (MyOrginizer.TodoModel) -&gt; Swift.Bool in MyOrginizer.TodoViewModel.lastSevenDays() -&gt; Swift.Array&lt;MyOrginizer.TodoModel&gt;"
+                  moduleName = "MyOrginizer"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/xenomorph/Developer/git/Swift/MyOrginizer/MyOrginizer/ViewModels/TodoViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "44"
+                  endingLineNumber = "44"
+                  offsetFromSymbolStart = "132">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

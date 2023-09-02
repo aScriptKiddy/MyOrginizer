@@ -19,7 +19,7 @@ struct TodoItemView: View {
 					.foregroundColor(.red)
 				Text(todoModel.title)
 				Spacer()
-				Text("Due date: \(Date().formatted(.dateTime.day().month().year()))")
+                Text("\(todoModel.dueDate.formatted(date: .abbreviated, time: .omitted))")
 					.font(.caption)
 			}
 			
@@ -45,7 +45,7 @@ struct TodoItemView: View {
 struct TodoItemView_Previews: PreviewProvider {
     static var previews: some View {
 		NavigationView {			
-			TodoItemView(todoModel: TodoModel(title: "First todo", dueDate: "1/20/23", note: "", isCompleted: false))
+            TodoItemView(todoModel: TodoModel(title: "First todo", dueDate: Date.now.addingTimeInterval(8400), note: "", isCompleted: false))
 		}
     }
 }

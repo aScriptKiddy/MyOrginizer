@@ -10,11 +10,11 @@ import Foundation
 struct TodoModel: Identifiable {
 	let id: String
 	let title: String
-	let dueDate: String
+	let dueDate: Date
 	let note: String?
 	let isCompleted: Bool
 	
-	init(id: String = UUID().uuidString, title: String, dueDate: String, note: String?, isCompleted: Bool) {
+	init(id: String = UUID().uuidString, title: String, dueDate: Date, note: String?, isCompleted: Bool) {
 		self.id = id
 		self.title = title
 		self.dueDate = dueDate
